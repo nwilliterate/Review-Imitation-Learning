@@ -1,7 +1,6 @@
 # Review
 
 
-
 > **Survey of imitation learning for robotic manipulation**(2019.12)
 >
 > B. Fang, S. Jia, D. Guo, M. Xu, S. Wen, and F. Sun,
@@ -32,20 +31,20 @@
 
 >  1.  **적응력향상(Enhancing Adaptability)**
 >
->     ​	개별의 로봇이 다른 것의 움직임을 관찰하여 모방 할 수 있는 능력이 있다면 새로운 환경에서 유용한 행동을 빠르게 배우고 적응할 수 있다. 
+>    개별의 로봇이 다른 것의 움직임을 관찰하여 모방 할 수 있는 능력이 있다면 새로운 환경에서 유용한 행동을 빠르게 배우고 적응할 수 있다. 
 >
 >  2. **커뮤니케이션 효율성 향상(Improving Communication Efficiency)**
 >
->     ​	모방은 비언어적인 의사소통으로써 개체가 다른 유형이나 하드웨어의 다른 개체에게 배울 수 있는 효과적인 수단으로 제공된다. 각각의 행동하는 동안 많은 양의 중요한 정보를 전송하므로 커뮤니케이션도 효율적이다.
+>    모방은 비언어적인 의사소통으로써 개체가 다른 유형이나 하드웨어의 다른 개체에게 배울 수 있는 효과적인 수단으로 제공된다. 각각의 행동하는 동안 많은 양의 중요한 정보를 전송하므로 커뮤니케이션도 효율적이다.
 >
 >  3.  **학습 효율성 향상(Improving Learning Efficiency)**
 >
->     ​	모방 학습의 가장 큰 이점은 학습 과정에서의 높은 효율성이다. 개체가 새로운 행동을 습득하면 개체들에게 빠르게 확산된다. 모방은 모든 개체의 학습 능력을 결합하여 최선의 행동을 빠르게 확산시킴으로써 전체 그룹의 생존력과 적응력을 향상시킨다. 
+>     모방 학습의 가장 큰 이점은 학습 과정에서의 높은 효율성이다. 개체가 새로운 행동을 습득하면 개체들에게 빠르게 확산된다. 모방은 모든 개체의 학습 능력을 결합하여 최선의 행동을 빠르게 확산시킴으로써 전체 그룹의 생존력과 적응력을 향상시킨다. 
 >
 >  4.  **다른 학습 메커니즘과 호환(Compatible with Other Learning Mechanisms)**
 >
->     ​	모방 학습은 학습의 속도와 정확성을 향상시킬 수있는 강화 학습처럼 다른 기계 학습과 결합할 수 있다.
-
+>    모방 학습은 학습의 속도와 정확성을 향상시킬 수있는 강화 학습처럼 다른 기계 학습과 결합할 수 있다.
+>
 
 
 ​	이러한 장점을 활용하여 최근 몇 년 동안 모방 학습이 빠르게 발전하여 로봇 학습 분야에서 뜨거운 연구 주제가됐다. 로봇 시스템의 모방 학습 과정은 일반적으로 아래 그림과 같이 **Demonstration**, **Representation**,  **Imitation Learning Algorithm**의 세 부분으로 구성되며, 다음 섹션에서 세 부분의 현재 연구 상태를 분석한다.
@@ -115,10 +114,6 @@
 
 
 
-
-
-
-
 #### 		2.2.2 궤적 특성화(Trajectory Characterization)
 
 ​	**Trajectory Characterization**는 궤적(*Trajectory*)과 작업의 조건(*Task-Related  Condition*)을 맵핑하는 것으로, 앞선 상징적 특성화와 비교하여 낮은 수준의 표현이다. 여기서 작업의 조건(*Task-Related  Condition*)은 예를 들어, 그랩핑 작업에서 그리퍼의 초기 위치,  물체의 목표 위치와 같은 시스템의 상태를 말한다. 궤적(*Trajectory*)은 시계열 시스템의 입력과 상태로 추상화시킬 수 있다.  상징적 표현(symbolic representation)에서 행동(*Action*)의 집합의 각 행동(*Action*)을 궤적 특성화로부터 특성화 시킬 수 있다.
@@ -170,12 +165,11 @@
 
 
 
-
 ### 2.3   Imitation learning algorithm 
 
 ​	로봇 모방 학습의 전체 과정에서 시연은 많은 특징을 포함하는 교시 샘플을 제공하며,  operation characterization는 로봇이 인식할 수 있는 유효한 형식으로 교시 샘플의 특징을 특성화한다. 모방학습의 궁극적인 목표는 로봇이 행동을 재현하고 다른 미지의 환경에서 행동을 일반화해야 하며, 이를 "Master" 행동이라고 한다.  이러한 "Master"행동을 위해 로봇이 교시정보를 사용하는 프로세스를 **Operation Imitation**이라 할수 있다. 이러한 Operation Imitation의 방법에는 크게 *Behavioral Cloning*, *Inverse Reinforcement Learning*, *Adversarial Imitation Learning* 의 세 가지 범주로 나눈다.
 
-##### 2.3.1 행동 복제(Behavioral Cloning)
+#### 2.3.1 행동 복제(Behavioral Cloning)
 
  	**행동 복제** 방법은 지도학습과 유사하며, 교시 정보를 사용하여 궤적(*Trajectory*)과 행동(*Action*)으로 상태(*status*) 및 작업 조건(*Condition*)을 직접 맵핑한다. 모델에 의존 여부에 따라 (1) 모델 기반 행동 복제와 (2) 비 모델 기반의 행동 복제로 나눌 수 있다.  또한, 조작의 특징화에 따라 (1) 궤적 특성화 행동 복제와 (2) 상태-행동 공간 특성화 행동복제 (3)  상징적 표현 행위 복제로 나눌 수 있다.  두 가지 분류에 따라 자유롭게 결합되어 많은 유형의 행동 복제 방법이 있다.
 
@@ -191,7 +185,7 @@
 
 
 
-##### 	2.3.2 역강화학습(Inverse Reinforcement Learning)
+#### 	2.3.2 역강화학습(Inverse Reinforcement Learning)
 
 ​	**Inverse Reinforcement Learning**은 전문가의 교시정보를 최적으로 가정함으로써 전문가의 의도를 나타내는 보상함수를 추정하고 추정된 보상함수를 기반으로 최종적으로 제어하기 위해 강화학습을 사용한다. 역강화학습의 경우 교시 샘플이 충분하지 않더라도 보상함수를 역으로 추정할 수 있어 Generalized Strategy를 도출할 수 있다.  역강화학습은 행동복제와 동일하게 분류된다.
 
@@ -207,7 +201,7 @@
 
 
 
-##### 	2.3.3 Adversarial Imitation Learning
+#### 	2.3.3 Adversarial Imitation Learning
 
 ​	행동 복제와 역강화학습은 오로지 전문가의 교시 정보를 바탕으로 학습하지만, 전문가의 교시 정보와 상호작용을 하지 않는다. 하지만 **Adversarial Imitation Learning**의 생성은 Generative Adversarial Network(GAN)과 Imitation Learning이 결합된 방법이다.  여기서 GAN은 2014년에 발표되었으며, Natural Language Processing 분야에서 많은 성과를 보여주었다. GAN은 생성자(Generator)와 식별자(Discriminator)가 있어 서로 대립하여 서로의 성능을 점차 개선해 나가는 개념이다. 이를 착안하여, 모방학습에 적용하면 위의 그림과  같이 생성된 데이터(*Generator*)와 초평면(*Discriminator*)로 나누고 서로 반복적인 모의 훈련을 수행하여, 두 데이터 사이를 가능한 가깝게 분포할 수 있도록 한다. 이는 결국 생성된 데이터(*Generator*)와  전문가의 데이터 패턴과 유사하게 된다.
 
@@ -225,14 +219,14 @@
 
 ​	요약하면, 모방학습은 로봇 조작에서 중요한 핵심 기술이 되었다. 그러나 이 분야의 현재 연구작업은 다음과 같은 문제에 직면해 있다.
 
-##### 3.1 Demonstration 
+#### 3.1 Demonstration 
 
  	 Although great progress has been made in teaching via wearable devices, most of Teleoperation teachings only consider the position and posture, and most of them are the mechanical arms of the end jaws, lacking information about the overall operation of the hand-arm system. For a multi-degree-of-freedom humanoid manipulator, it is necessary to consider the operational configuration, position, attitude, and the dexterous hand’s operating force, that is, the tactile teaching. But how to integrate multi-modal teaching methods to achieve high-quality teaching samples remains a challenging issue.  
 
-##### 3.2 Representation
+#### 3.2 Representation
 
 ​	현재 대부분의 연구는  Trajectory이나 Visual Representation에 중점을 둔다. 하지만  Visual과 Tactile Representations은  모방학습에 더 많은 정보를 제공할 수 있다. 로봇 조작에서 Visual과 Tactile 정보 간의 상관 관계를 이용하는 방법이나 복합정보의 특성화를 배우는 방법은 실제 응용에서 매우 중요한 문제이다. 이 분야 연구는   이제 시작되었다. 그리고 이는  Operational Characterization의 초석뿐만아니라 미래 복합 교시 정보 특성화를 위한 중요한 방향이다.
 
-##### 3.3 Learning
+#### 3.3 Learning
 
 ​	  The existing imitative operation learning has a low utilization rate of teaching samples, and cannot achieve efficient strategy learning. The operation of the imitation learning algorithm is more sensible for **multi-modal characteristics, operational space locality, and small samples** which pose a great challenge to the generalization of imitation operations How to design an efficient **robotic imitation learning framework** is still at the forefront of robot learning. In general, the **multi-modal imitation learning** of robotic operation technology provides a more **efficient and high-quality way** for the robot to better grasp the operational skills, which is of great significance for improving the operational intelligence of robots. There are still many challenging academic problems in this field, and it is **necessary to carry out in-depth exploration and analysis** from the perspectives of signal processing, machine learning, and robot operation theory 
