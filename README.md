@@ -34,17 +34,17 @@
 >
 >     ​	개별의 로봇이 다른 것의 움직임을 관찰하여 모방 할 수 있는 능력이 있다면 새로운 환경에서 유용한 행동을 빠르게 배우고 적응할 수 있다. 
 >
->  2. **커뮤니케이션 효율성 향상(Improving Communication Efficiency) **
+>  2. **커뮤니케이션 효율성 향상(Improving Communication Efficiency)**
 >
 >     ​	모방은 비언어적인 의사소통으로써 개체가 다른 유형이나 하드웨어의 다른 개체에게 배울 수 있는 효과적인 수단으로 제공된다. 각각의 행동하는 동안 많은 양의 중요한 정보를 전송하므로 커뮤니케이션도 효율적이다.
 >
->  3.  **학습 효율성 향상(Improving Learning Efficiency) **
+>  3.  **학습 효율성 향상(Improving Learning Efficiency)**
 >
 >     ​	모방 학습의 가장 큰 이점은 학습 과정에서의 높은 효율성이다. 개체가 새로운 행동을 습득하면 개체들에게 빠르게 확산된다. 모방은 모든 개체의 학습 능력을 결합하여 최선의 행동을 빠르게 확산시킴으로써 전체 그룹의 생존력과 적응력을 향상시킨다. 
 >
->  4.  **다른 학습 메커니즘과 호환(Compatible with Other Learning Mechanisms) **
+>  4.  **다른 학습 메커니즘과 호환(Compatible with Other Learning Mechanisms)**
 >
->      	모방 학습은 학습의 속도와 정확성을 향상시킬 수있는 강화 학습처럼 다른 기계 학습과 결합할 수 있다.
+>     ​	모방 학습은 학습의 속도와 정확성을 향상시킬 수있는 강화 학습처럼 다른 기계 학습과 결합할 수 있다.
 
 
 
@@ -55,10 +55,6 @@
 > *Representation*은 앞선 시연 과정에서 획득한 데이터를 로봇에 적용될 수 있도록 특성화시키는 것입니다(정책의 추상화 단계).
 >
 > *Imitation Learning Algorithm*은 앞선 리프레젠테이션 과정 이후 러닝을 하여 최종적으로 행동을 "마스터" 하게 한다. 여기서 행동을 "마스터"한다. 이 의미는 모방학습의 궁극적인 목표와 동일하며, "로봇이 행동을 그대로 재현하고 다른 미지의 환경에서 행동을 일반화할 수 있는 것"을 말한다.
-
-<img src="C:\Users\Joseonghyeon\AppData\Roaming\Typora\typora-user-images\image-20200331202504611.png" alt="image-20200331202504611" style="zoom:80%;" />
-
-
 
 
 
@@ -78,7 +74,6 @@
 
 의인화
 
-![image-20200331203043354](C:\Users\Joseonghyeon\AppData\Roaming\Typora\typora-user-images\image-20200331203043354.png)
 
 > ​	(1) *Visual Indirect Teaching*은 기계학습을 통해 전문가의 이미지를 관측하는 것이며, 이 방법은 높은 학습 속도로 핫한 연구 주제가 되었다. 하지만 이러한 교시 샘플은 로봇 조작에 결정적인 촉각 정보와 같은 정보들이 부족하다.
 >
@@ -92,13 +87,10 @@
 
  로봇의 동작이 더 정확합니다. 직접 교육은 그림 3과 같이 **Kinesthetic Teaching** (Amir and Matteo 2018)과 **Teleoperation Teaching** (Zhang et.al. 2018)으로 나눌 수 있습니다.  
 
-<img src="C:\Users\Joseonghyeon\AppData\Roaming\Typora\typora-user-images\image-20200331203401799.png" alt="image-20200331203401799" style="zoom:80%;" />
 
 > ​	(1) *Kinesthetic Teaching*은 작업자가 로봇과 직접 접촉하고 안내하여 특정 작업을 완료하고 로봇이 자체적으로 정보를 수집하는 것을 의미한다. 이 교시 방법은 로봇과 인체 간의 다른 기구학적 파라미터를 고려할 필요가 없고 수집된 훈련 데이터의 노이즈가 비교적 낮은 수치를 가지며, 직관적으로 제어 프로세스를 반영한다. 하지만 이러한 상호작용에 적합한 로봇은 수동 제어가 가능해야 하고 직접 접촉을 해야 한다. 그렇기 때문에 다중 자유도 로봇 팔이나 듀얼 암 로봇과 같은 로봇에 적합하지 않다.
 >
 > ​	(2) *Teleoperation Teaching* 은 조이스틱, 촉각 센서, 컨트롤 패널, 적외선 센서, 웨어러블 장치 이나 다른 원격 교시 디바이스로부터 수행한다. 데모는 교시 과정에서 로봇 자체를 구속하지 안고 전문가와 로봇 간에 직접적인 접촉이 없어 안정성을 보장한다. 그 결과 원격 시연은 높은 안전성과 넓은 적용 범위으로 인한 이점으로 높은 수준의 전문가 샘플을 얻을 수 있다. 이를 위해 *Li Feifei's* 팀은 시연을 위해 RoboTurk 네트워크 플랫폼을 구축했다. 시연자는 휴대폰이나 마우스를 사용하여 로봇 암을 원격으로 자유롭게 조작할 수 있고 아래 그림과 같이 편리하게 많은 양의 데이터 셋을 얻을 수 있다. 하지만 현재 대부분의 원격 조작은 자세 또는 궤적을 기반으로 한 교시이다. 실제 작동하는 힘의 정보가 부족하고 정교한 작업을 수행하기 어렵다.
-
-<img src="C:\Users\Joseonghyeon\AppData\Roaming\Typora\typora-user-images\image-20200331204959780.png" alt="image-20200331204959780" style="zoom:80%;" />
 
 
 
@@ -110,7 +102,6 @@
 
 #### 2.2.1 상징적 특성화(Symbolic Characterization)	
 
-<img src="C:\Users\Joseonghyeon\AppData\Roaming\Typora\typora-user-images\image-20200407140637129.png" alt="image-20200407140637129" style="zoom: 67%;" />
 
 ​	**Symbolic Characterization**에서 학습을 통해 일련의 옵션(*Option*)을 생성하고 일정 시간 동안 취하는 행동에 대한 정책으로 정의한 것이다.목록에서 다른 옵션(*Option*)을 선택하는 것으로 다른 작업을 수행한다. 복잡한 작업의 경우, 단일 행동(*Action*)으로 수행하기 어렵기 때문에, 상징적 표현(*Symbolic Representation*)은 옵션(*Option*)에서 단순한 행동의 집합을 정렬함으로써 복잡한 작업으로 특성화시킨다. 상징적 표현은 모방 학습에서 로봇의 높은 수준의 행동 표현이며, 다음과 같은 장점을 가진다.
 
@@ -130,8 +121,6 @@
 
 #### 		2.2.2 궤적 특성화(Trajectory Characterization)
 
-<img src="C:\Users\Joseonghyeon\AppData\Roaming\Typora\typora-user-images\image-20200407140616865.png" alt="image-20200407140616865" style="zoom:67%;" />
-
 ​	**Trajectory Characterization**는 궤적(*Trajectory*)과 작업의 조건(*Task-Related  Condition*)을 맵핑하는 것으로, 앞선 상징적 특성화와 비교하여 낮은 수준의 표현이다. 여기서 작업의 조건(*Task-Related  Condition*)은 예를 들어, 그랩핑 작업에서 그리퍼의 초기 위치,  물체의 목표 위치와 같은 시스템의 상태를 말한다. 궤적(*Trajectory*)은 시계열 시스템의 입력과 상태로 추상화시킬 수 있다.  상징적 표현(symbolic representation)에서 행동(*Action*)의 집합의 각 행동(*Action*)을 궤적 특성화로부터 특성화 시킬 수 있다.
 
 > + Trajectory Characterization을 적용한 논문
@@ -147,8 +136,6 @@
 
 
 #### 	2.2.3 행동-상태 공간 특성화(Action-State Spatial Characterization)
-
-<img src="C:\Users\Joseonghyeon\AppData\Roaming\Typora\typora-user-images\image-20200407140708261.png" alt="image-20200407140708261" style="zoom: 67%;" />
 
 ​	**Action-State Space**는 앞선 다른 두 가지의 특성화와는 다른 특징이 있다. 사전에 행동(*action*)들과 옵션(*option*)들을 생성하고 특성 상태(*state*)가 발생하는 경우, 일련의 행동-상태 판단(*action-state decision*)을 생성한다. 상응하는 제어 행동(*action*)은 작업 조건(*Condition*)과 제어할 수 있는 상태(*state*) 사이 맵핑 관계로 정해진다.
 
@@ -190,8 +177,6 @@
 
 ##### 2.3.1 행동 복제(Behavioral Cloning)
 
-![image-20200407141147540](C:\Users\Joseonghyeon\AppData\Roaming\Typora\typora-user-images\image-20200407141147540.png)
-
  	**행동 복제** 방법은 지도학습과 유사하며, 교시 정보를 사용하여 궤적(*Trajectory*)과 행동(*Action*)으로 상태(*status*) 및 작업 조건(*Condition*)을 직접 맵핑한다. 모델에 의존 여부에 따라 (1) 모델 기반 행동 복제와 (2) 비 모델 기반의 행동 복제로 나눌 수 있다.  또한, 조작의 특징화에 따라 (1) 궤적 특성화 행동 복제와 (2) 상태-행동 공간 특성화 행동복제 (3)  상징적 표현 행위 복제로 나눌 수 있다.  두 가지 분류에 따라 자유롭게 결합되어 많은 유형의 행동 복제 방법이 있다.
 
 > Behavioral Cloning 관련 연구 동향
@@ -208,8 +193,6 @@
 
 ##### 	2.3.2 역강화학습(Inverse Reinforcement Learning)
 
-![image-20200407141201413](C:\Users\Joseonghyeon\AppData\Roaming\Typora\typora-user-images\image-20200407141201413.png)
-
 ​	**Inverse Reinforcement Learning**은 전문가의 교시정보를 최적으로 가정함으로써 전문가의 의도를 나타내는 보상함수를 추정하고 추정된 보상함수를 기반으로 최종적으로 제어하기 위해 강화학습을 사용한다. 역강화학습의 경우 교시 샘플이 충분하지 않더라도 보상함수를 역으로 추정할 수 있어 Generalized Strategy를 도출할 수 있다.  역강화학습은 행동복제와 동일하게 분류된다.
 
 >+ Inverse Reinforcement Learning 관련 연구 동향
@@ -225,8 +208,6 @@
 
 
 ##### 	2.3.3 Adversarial Imitation Learning
-
-<img src="C:\Users\Joseonghyeon\AppData\Roaming\Typora\typora-user-images\image-20200407141547027.png" alt="image-20200407141547027" style="zoom:67%;" />
 
 ​	행동 복제와 역강화학습은 오로지 전문가의 교시 정보를 바탕으로 학습하지만, 전문가의 교시 정보와 상호작용을 하지 않는다. 하지만 **Adversarial Imitation Learning**의 생성은 Generative Adversarial Network(GAN)과 Imitation Learning이 결합된 방법이다.  여기서 GAN은 2014년에 발표되었으며, Natural Language Processing 분야에서 많은 성과를 보여주었다. GAN은 생성자(Generator)와 식별자(Discriminator)가 있어 서로 대립하여 서로의 성능을 점차 개선해 나가는 개념이다. 이를 착안하여, 모방학습에 적용하면 위의 그림과  같이 생성된 데이터(*Generator*)와 초평면(*Discriminator*)로 나누고 서로 반복적인 모의 훈련을 수행하여, 두 데이터 사이를 가능한 가깝게 분포할 수 있도록 한다. 이는 결국 생성된 데이터(*Generator*)와  전문가의 데이터 패턴과 유사하게 된다.
 
